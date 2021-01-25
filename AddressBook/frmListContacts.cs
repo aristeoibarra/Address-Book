@@ -25,10 +25,13 @@ namespace AddressBook
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            frmContact frm = new frmContact();
             switch (e.ColumnIndex)
             {
                 case 5:// btnEdit
-                    MessageBox.Show("button Edit");                   
+
+                    MessageBox.Show("button Edit");
+                    frm.Show();
                     break;
                 case 6:// btnView 
                     MessageBox.Show("button View");

@@ -101,6 +101,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsAddressBook.xsd</DependentUpon>
     </Compile>
+    <Compile Include="frmContact.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmContact.Designer.cs">
+      <DependentUpon>frmContact.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmListContacts.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +115,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmContact.resx">
+      <DependentUpon>frmContact.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmListContacts.resx">
       <DependentUpon>frmListContacts.cs</DependentUpon>
     </EmbeddedResource>
