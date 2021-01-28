@@ -51,7 +51,19 @@ namespace AddressBook
 
         public override bool Delete(int id)
         {
-            throw new NotImplementedException();
+            bool success;
+            try
+            {
+                dsAddressBookTableAdapters.directoryTableAdapter directory = new dsAddressBookTableAdapters.directoryTableAdapter();
+                directory.DeleteQuery(id);
+
+                success = true;
+            }
+            catch (Exception)
+            {
+                success = false;
+            }
+            return success;
         }
 
         public override bool GetData(DataGridView dgv)
