@@ -34,15 +34,15 @@ namespace AddressBook
             this.skyLabel4 = new ReaLTaiizor.Controls.SkyLabel();
             this.skyLabel3 = new ReaLTaiizor.Controls.SkyLabel();
             this.skyLabel2 = new ReaLTaiizor.Controls.SkyLabel();
-            this.dungeonLinkLabel1 = new ReaLTaiizor.Controls.DungeonLinkLabel();
+            this.llbSendEmail = new ReaLTaiizor.Controls.DungeonLinkLabel();
             this.txtEmail = new ReaLTaiizor.Controls.HopeTextBox();
             this.textBox1 = new ReaLTaiizor.Controls.HopeTextBox();
             this.txtLastName = new ReaLTaiizor.Controls.HopeTextBox();
             this.txtFirstName = new ReaLTaiizor.Controls.HopeTextBox();
             this.skyLabel1 = new ReaLTaiizor.Controls.SkyLabel();
             this.txtPhoneNumber = new System.Windows.Forms.MaskedTextBox();
-            this.hopeButton1 = new ReaLTaiizor.Controls.HopeButton();
-            this.dungeonLinkLabel2 = new ReaLTaiizor.Controls.DungeonLinkLabel();
+            this.btnSave = new ReaLTaiizor.Controls.HopeButton();
+            this.llbBackList = new ReaLTaiizor.Controls.DungeonLinkLabel();
             this.SuspendLayout();
             // 
             // hopeForm1
@@ -106,21 +106,21 @@ namespace AddressBook
             this.skyLabel2.TabIndex = 30;
             this.skyLabel2.Text = "First Name:";
             // 
-            // dungeonLinkLabel1
+            // llbSendEmail
             // 
-            this.dungeonLinkLabel1.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(97)))), ((int)(((byte)(1)))));
-            this.dungeonLinkLabel1.AutoSize = true;
-            this.dungeonLinkLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.dungeonLinkLabel1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dungeonLinkLabel1.LinkBehavior = System.Windows.Forms.LinkBehavior.AlwaysUnderline;
-            this.dungeonLinkLabel1.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(97)))), ((int)(((byte)(1)))));
-            this.dungeonLinkLabel1.Location = new System.Drawing.Point(460, 298);
-            this.dungeonLinkLabel1.Name = "dungeonLinkLabel1";
-            this.dungeonLinkLabel1.Size = new System.Drawing.Size(85, 20);
-            this.dungeonLinkLabel1.TabIndex = 26;
-            this.dungeonLinkLabel1.TabStop = true;
-            this.dungeonLinkLabel1.Text = "Send Email";
-            this.dungeonLinkLabel1.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(97)))), ((int)(((byte)(1)))));
+            this.llbSendEmail.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(97)))), ((int)(((byte)(1)))));
+            this.llbSendEmail.AutoSize = true;
+            this.llbSendEmail.BackColor = System.Drawing.Color.Transparent;
+            this.llbSendEmail.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.llbSendEmail.LinkBehavior = System.Windows.Forms.LinkBehavior.AlwaysUnderline;
+            this.llbSendEmail.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(97)))), ((int)(((byte)(1)))));
+            this.llbSendEmail.Location = new System.Drawing.Point(460, 298);
+            this.llbSendEmail.Name = "llbSendEmail";
+            this.llbSendEmail.Size = new System.Drawing.Size(85, 20);
+            this.llbSendEmail.TabIndex = 26;
+            this.llbSendEmail.TabStop = true;
+            this.llbSendEmail.Text = "Send Email";
+            this.llbSendEmail.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(97)))), ((int)(((byte)(1)))));
             // 
             // txtEmail
             // 
@@ -237,41 +237,41 @@ namespace AddressBook
             this.txtPhoneNumber.Size = new System.Drawing.Size(326, 20);
             this.txtPhoneNumber.TabIndex = 31;
             // 
-            // hopeButton1
+            // btnSave
             // 
-            this.hopeButton1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(223)))), ((int)(((byte)(230)))));
-            this.hopeButton1.ButtonType = ReaLTaiizor.Util.HopeButtonType.Primary;
-            this.hopeButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.hopeButton1.DangerColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(108)))), ((int)(((byte)(108)))));
-            this.hopeButton1.DefaultColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.hopeButton1.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.hopeButton1.HoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(49)))), ((int)(((byte)(51)))));
-            this.hopeButton1.InfoColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(147)))), ((int)(((byte)(153)))));
-            this.hopeButton1.Location = new System.Drawing.Point(204, 313);
-            this.hopeButton1.Name = "hopeButton1";
-            this.hopeButton1.PrimaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(158)))), ((int)(((byte)(255)))));
-            this.hopeButton1.Size = new System.Drawing.Size(129, 40);
-            this.hopeButton1.SuccessColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(194)))), ((int)(((byte)(58)))));
-            this.hopeButton1.TabIndex = 32;
-            this.hopeButton1.Text = "Save";
-            this.hopeButton1.TextColor = System.Drawing.Color.White;
-            this.hopeButton1.WarningColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(162)))), ((int)(((byte)(60)))));
+            this.btnSave.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(223)))), ((int)(((byte)(230)))));
+            this.btnSave.ButtonType = ReaLTaiizor.Util.HopeButtonType.Primary;
+            this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSave.DangerColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(108)))), ((int)(((byte)(108)))));
+            this.btnSave.DefaultColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnSave.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnSave.HoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(49)))), ((int)(((byte)(51)))));
+            this.btnSave.InfoColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(147)))), ((int)(((byte)(153)))));
+            this.btnSave.Location = new System.Drawing.Point(204, 313);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.PrimaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(158)))), ((int)(((byte)(255)))));
+            this.btnSave.Size = new System.Drawing.Size(129, 40);
+            this.btnSave.SuccessColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(194)))), ((int)(((byte)(58)))));
+            this.btnSave.TabIndex = 32;
+            this.btnSave.Text = "Save";
+            this.btnSave.TextColor = System.Drawing.Color.White;
+            this.btnSave.WarningColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(162)))), ((int)(((byte)(60)))));
             // 
-            // dungeonLinkLabel2
+            // llbBackList
             // 
-            this.dungeonLinkLabel2.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(97)))), ((int)(((byte)(1)))));
-            this.dungeonLinkLabel2.AutoSize = true;
-            this.dungeonLinkLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.dungeonLinkLabel2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dungeonLinkLabel2.LinkBehavior = System.Windows.Forms.LinkBehavior.AlwaysUnderline;
-            this.dungeonLinkLabel2.LinkColor = System.Drawing.Color.Navy;
-            this.dungeonLinkLabel2.Location = new System.Drawing.Point(12, 365);
-            this.dungeonLinkLabel2.Name = "dungeonLinkLabel2";
-            this.dungeonLinkLabel2.Size = new System.Drawing.Size(90, 20);
-            this.dungeonLinkLabel2.TabIndex = 26;
-            this.dungeonLinkLabel2.TabStop = true;
-            this.dungeonLinkLabel2.Text = "Back to List";
-            this.dungeonLinkLabel2.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(97)))), ((int)(((byte)(1)))));
+            this.llbBackList.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(97)))), ((int)(((byte)(1)))));
+            this.llbBackList.AutoSize = true;
+            this.llbBackList.BackColor = System.Drawing.Color.Transparent;
+            this.llbBackList.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.llbBackList.LinkBehavior = System.Windows.Forms.LinkBehavior.AlwaysUnderline;
+            this.llbBackList.LinkColor = System.Drawing.Color.Navy;
+            this.llbBackList.Location = new System.Drawing.Point(12, 365);
+            this.llbBackList.Name = "llbBackList";
+            this.llbBackList.Size = new System.Drawing.Size(90, 20);
+            this.llbBackList.TabIndex = 26;
+            this.llbBackList.TabStop = true;
+            this.llbBackList.Text = "Back to List";
+            this.llbBackList.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(97)))), ((int)(((byte)(1)))));
             // 
             // frmContact
             // 
@@ -279,15 +279,15 @@ namespace AddressBook
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(219)))), ((int)(((byte)(189)))));
             this.ClientSize = new System.Drawing.Size(585, 394);
-            this.Controls.Add(this.hopeButton1);
+            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.txtPhoneNumber);
             this.Controls.Add(this.skyLabel5);
             this.Controls.Add(this.skyLabel4);
             this.Controls.Add(this.skyLabel3);
             this.Controls.Add(this.skyLabel1);
             this.Controls.Add(this.skyLabel2);
-            this.Controls.Add(this.dungeonLinkLabel2);
-            this.Controls.Add(this.dungeonLinkLabel1);
+            this.Controls.Add(this.llbBackList);
+            this.Controls.Add(this.llbSendEmail);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.txtLastName);
@@ -311,14 +311,14 @@ namespace AddressBook
         private ReaLTaiizor.Controls.SkyLabel skyLabel4;
         private ReaLTaiizor.Controls.SkyLabel skyLabel3;
         private ReaLTaiizor.Controls.SkyLabel skyLabel2;
-        private ReaLTaiizor.Controls.DungeonLinkLabel dungeonLinkLabel1;
+        private ReaLTaiizor.Controls.DungeonLinkLabel llbSendEmail;
         private ReaLTaiizor.Controls.HopeTextBox txtEmail;
         private ReaLTaiizor.Controls.HopeTextBox textBox1;
         private ReaLTaiizor.Controls.HopeTextBox txtLastName;
         private ReaLTaiizor.Controls.HopeTextBox txtFirstName;
         private ReaLTaiizor.Controls.SkyLabel skyLabel1;
         private System.Windows.Forms.MaskedTextBox txtPhoneNumber;
-        private ReaLTaiizor.Controls.HopeButton hopeButton1;
-        private ReaLTaiizor.Controls.DungeonLinkLabel dungeonLinkLabel2;
+        private ReaLTaiizor.Controls.HopeButton btnSave;
+        private ReaLTaiizor.Controls.DungeonLinkLabel llbBackList;
     }
 }
