@@ -17,11 +17,25 @@ namespace AddressBook
 
         public override bool Add()
         {
-            throw new NotImplementedException();
+            bool success;
+            try
+            {
+                dsAddressBookTableAdapters.directoryTableAdapter directory = new dsAddressBookTableAdapters.directoryTableAdapter();
+                directory.Add(FirstName, LastName, Email, PhoneNumber);
+
+                success = true;
+            }
+            catch (Exception ex)
+            {
+                success = false;
+            }
+            return success;
         }
-        public override bool Update()
+
+        public override bool Update(int id)
         {
-            throw new NotImplementedException();
+                   
+            
         }
 
         public override bool Delete()

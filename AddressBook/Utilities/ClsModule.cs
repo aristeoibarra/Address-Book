@@ -37,5 +37,8 @@ namespace AddressBook.Utilities
         /// <param name="id">id of the record to delete.</param>
         /// <return>"True" if it was a success </return>
         public abstract bool Delete();
+
+
+   
     }
 }
