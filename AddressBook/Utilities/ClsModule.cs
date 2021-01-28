@@ -9,6 +9,8 @@ namespace AddressBook.Utilities
 {
     abstract class ClsModule
     {
+        protected List<string> error = new List<string>();
+
         /// <summary>
         /// Method that makes the refresh of the data.
         /// </summary>
