@@ -29,14 +29,14 @@ namespace AddressBook.Utilities
         /// </summary>
         /// <param name="id">id of the record to update.</param>
         /// <return>"True" if it was a success </return>
-        public abstract bool Update();
+        public abstract bool Update(int id);
 
         /// <summary>
         /// Method that delete a record.
         /// </summary>
         /// <param name="id">id of the record to delete.</param>
         /// <return>"True" if it was a success </return>
-        public abstract bool Delete();
+        public abstract bool Delete(int id);
 
 
    

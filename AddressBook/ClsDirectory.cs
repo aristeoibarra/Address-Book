@@ -25,7 +25,7 @@ namespace AddressBook
 
                 success = true;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 success = false;
             }
@@ -34,11 +34,22 @@ namespace AddressBook
 
         public override bool Update(int id)
         {
-                   
-            
+            bool success;
+            try
+            {
+                dsAddressBookTableAdapters.directoryTableAdapter directory = new dsAddressBookTableAdapters.directoryTableAdapter();
+                directory.Edit(FirstName, LastName, Email, PhoneNumber,id);
+
+                success = true;
+            }
+            catch (Exception)
+            {
+                success = false;
+            }
+            return success;
         }
 
-        public override bool Delete()
+        public override bool Delete(int id)
         {
             throw new NotImplementedException();
         }
