@@ -19,6 +19,13 @@ namespace AddressBook.Utilities
         public abstract bool GetData(DataGridView dgv);
 
         /// <summary>
+        /// Method that fills the data of only one record .
+        /// </summary>
+        /// <param name="id">id of the record.</param>
+        /// <returns>Return success</returns>
+        public abstract bool GetData(int id);
+
+        /// <summary>
         /// Method that adds a record
         /// </summary>
         /// <return>"True" if it was a success </return>

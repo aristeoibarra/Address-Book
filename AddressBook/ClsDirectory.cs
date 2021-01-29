@@ -69,6 +69,28 @@ namespace AddressBook
         public override bool GetData(DataGridView dgv)
         {
             throw new NotImplementedException();
-        }    
+        }
+
+        public override bool GetData(int id)
+        {
+            bool success = false;
+            try
+            {
+                dsAddressBookTableAdapters.directoryTableAdapter ta = new dsAddressBookTableAdapters.directoryTableAdapter();
+                dsAddressBook.directoryDataTable dt = ta.GetDataById(id);
+
+                if (dt.Rows.Count > 0)
+                {
+                    data = (dsAddressBook.directoryRow)dt.Rows[0];
+                    success = true;
+                }
+            }
+            catch (Exception)
+            {
+                success = false;
+            }
+
+            return success;
+        }
     }
 }
