@@ -30,11 +30,22 @@ namespace AddressBook
                     Edit();
                     break;
                 case 6:// btnView 
-                    OpenForm(new frmContact());
+                    Details();
                     break;
                 case 7:// btnDelete
                     Delete();
                     break;
+            }
+        }        
+        private void Details()
+        {
+            // idAddress
+            int id = Utilities.FormOperations.GetId(dgvData);
+            if (id > 0)
+            {
+                frmDetailsContact frm = new frmDetailsContact();
+                frm.idAddress = id;
+                OpenForm(frm);
             }
         }
 

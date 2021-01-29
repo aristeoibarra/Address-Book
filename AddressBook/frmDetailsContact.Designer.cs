@@ -204,6 +204,7 @@ namespace AddressBook
             this.Name = "frmDetailsContact";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmViewContact";
+            this.Load += new System.EventHandler(this.frmDetailsContact_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

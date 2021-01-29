@@ -25,10 +25,10 @@ namespace AddressBook
             if (idAddress > 0)
             {
                 GetData();
-                lblTitle.Text = "EDIT";
+                lblTitle.Text = "Edit";
             }
             else
-                lblTitle.Text = "CREATE";      
+                lblTitle.Text = "Create";      
         }
 
         private void GetData()
