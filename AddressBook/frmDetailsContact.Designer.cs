@@ -40,6 +40,8 @@ namespace AddressBook
             this.lblLastName = new ReaLTaiizor.Controls.SkyLabel();
             this.lblPhoneNumber = new ReaLTaiizor.Controls.SkyLabel();
             this.lblEmail = new ReaLTaiizor.Controls.SkyLabel();
+            this.llbEdit = new ReaLTaiizor.Controls.DungeonLinkLabel();
+            this.skyLabel1 = new ReaLTaiizor.Controls.SkyLabel();
             this.SuspendLayout();
             // 
             // hopeForm1
@@ -112,7 +114,7 @@ namespace AddressBook
             this.llbBackList.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.llbBackList.LinkBehavior = System.Windows.Forms.LinkBehavior.AlwaysUnderline;
             this.llbBackList.LinkColor = System.Drawing.Color.Navy;
-            this.llbBackList.Location = new System.Drawing.Point(10, 281);
+            this.llbBackList.Location = new System.Drawing.Point(63, 288);
             this.llbBackList.Name = "llbBackList";
             this.llbBackList.Size = new System.Drawing.Size(90, 20);
             this.llbBackList.TabIndex = 37;
@@ -180,6 +182,34 @@ namespace AddressBook
             this.lblEmail.TabIndex = 38;
             this.lblEmail.Text = "Email";
             // 
+            // llbEdit
+            // 
+            this.llbEdit.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(97)))), ((int)(((byte)(1)))));
+            this.llbEdit.AutoSize = true;
+            this.llbEdit.BackColor = System.Drawing.Color.Transparent;
+            this.llbEdit.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.llbEdit.LinkBehavior = System.Windows.Forms.LinkBehavior.AlwaysUnderline;
+            this.llbEdit.LinkColor = System.Drawing.Color.Navy;
+            this.llbEdit.Location = new System.Drawing.Point(11, 288);
+            this.llbEdit.Name = "llbEdit";
+            this.llbEdit.Size = new System.Drawing.Size(36, 20);
+            this.llbEdit.TabIndex = 37;
+            this.llbEdit.TabStop = true;
+            this.llbEdit.Text = "Edit";
+            this.llbEdit.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(97)))), ((int)(((byte)(1)))));
+            this.llbEdit.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llbEdit_LinkClicked);
+            // 
+            // skyLabel1
+            // 
+            this.skyLabel1.AutoSize = true;
+            this.skyLabel1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.skyLabel1.ForeColor = System.Drawing.Color.Navy;
+            this.skyLabel1.Location = new System.Drawing.Point(49, 288);
+            this.skyLabel1.Name = "skyLabel1";
+            this.skyLabel1.Size = new System.Drawing.Size(14, 20);
+            this.skyLabel1.TabIndex = 38;
+            this.skyLabel1.Text = "|";
+            // 
             // frmDetailsContact
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -187,6 +217,7 @@ namespace AddressBook
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(219)))), ((int)(((byte)(189)))));
             this.ClientSize = new System.Drawing.Size(519, 317);
             this.Controls.Add(this.llbSendEmail);
+            this.Controls.Add(this.skyLabel1);
             this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.skyLabel5);
             this.Controls.Add(this.lblPhoneNumber);
@@ -195,6 +226,7 @@ namespace AddressBook
             this.Controls.Add(this.skyLabel3);
             this.Controls.Add(this.lblFirstName);
             this.Controls.Add(this.skyLabel2);
+            this.Controls.Add(this.llbEdit);
             this.Controls.Add(this.llbBackList);
             this.Controls.Add(this.hopeForm1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -223,5 +255,7 @@ namespace AddressBook
         private ReaLTaiizor.Controls.SkyLabel lblLastName;
         private ReaLTaiizor.Controls.SkyLabel lblPhoneNumber;
         private ReaLTaiizor.Controls.SkyLabel lblEmail;
+        private ReaLTaiizor.Controls.DungeonLinkLabel llbEdit;
+        private ReaLTaiizor.Controls.SkyLabel skyLabel1;
     }
 }

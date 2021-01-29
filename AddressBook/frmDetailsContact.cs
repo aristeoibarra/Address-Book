@@ -43,5 +43,28 @@ namespace AddressBook
                 this.Close();
             }
         }
+
+        private void llbEdit_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Edit();
+        }
+
+        private void Edit()
+        {
+            // idAddress
+            if (idAddress > 0)
+            {
+                frmContact frm = new frmContact();
+                frm.idAddress = this.idAddress;
+                OpenForm(frm);
+            }
+        }
+
+        private void OpenForm(frmContact form)
+        {
+            this.Hide();
+            form.ShowDialog();
+            this.Show();
+        }
     }
 }
