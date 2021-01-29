@@ -19,8 +19,7 @@ namespace AddressBook
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'dsAddressBook.directory' Puede moverla o quitarla según sea necesario.
-            this.directoryTableAdapter.Fill(this.dsAddressBook.directory);
+            RefreachData();
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -28,7 +27,7 @@ namespace AddressBook
             switch (e.ColumnIndex)
             {
                 case 5:// btnEdit
-                    OpenForm(new frmContact());                   
+                    Edit();
                     break;
                 case 6:// btnView 
                     OpenForm(new frmContact());
@@ -39,12 +38,28 @@ namespace AddressBook
             }
         }
 
+        private void Edit()
+        {
+            // idAddress
+            int id = Utilities.FormOperations.GetId(dgvData);
+            if (id > 0)
+            {
+                frmContact frm = new frmContact();
+                frm.idAddress = id;
+                OpenForm(frm);
+            }
+        }
+
+        private void RefreachData()
+        {
+            this.directoryTableAdapter.Fill(this.dsAddressBook.directory);
+        }
         public void OpenForm(Form form) 
         {           
             this.Hide();
             form.ShowDialog();
             this.Show();
-            this.directoryTableAdapter.Fill(this.dsAddressBook.directory);
+            RefreachData();
         }
 
         private void btnCreateNew_Click(object sender, EventArgs e)

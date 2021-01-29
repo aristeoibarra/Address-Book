@@ -20,6 +20,33 @@ namespace AddressBook
             InitializeComponent();
         }
 
+        private void frmContact_Load(object sender, EventArgs e)
+        {
+            if (idAddress > 0)
+            {
+                GetData();
+                lblTitle.Text = "EDIT";
+            }
+            else
+                lblTitle.Text = "CREATE";      
+        }
+
+        private void GetData()
+        {
+            if (directory.GetData(idAddress))
+            {
+                txtFirstName.Text = directory.data.first_name;
+                txtLastName.Text = directory.data.last_name;
+                txtPhoneNumber.Text = directory.data.phone_number;
+                txtEmail.Text = directory.data.email;
+            }
+            else
+            {
+                MessageBox.Show("Occurred a problem to fill the data.");
+                this.Close();
+            }
+        }
+
         private void btnSave_Click(object sender, EventArgs e)
         {
             if (idAddress <= 0)
@@ -75,7 +102,38 @@ namespace AddressBook
 
         private void Edit()
         {
-            throw new NotImplementedException();
-        } 
+            try
+            {
+                //Validations
+                if (txtFirstName.Text.Trim().Equals("") || txtLastName.Text.Trim().Equals("")
+                    || txtEmail.Text.Trim().Equals("") || txtPhoneNumber.Text.Trim().Equals(""))
+                {
+                    MessageBox.Show("FirstName, LastName, Email and PhoneNumber are required");
+                    return;
+                }
+                if (!Utilities.FormOperations.IsValidEmail(txtEmail.Text))
+                {
+                    MessageBox.Show("Email must be valid", "Warning");
+                    return;
+                }
+
+                //DATA
+                DataPerson();
+
+                if (directory.Update(idAddress))
+                {
+                    MessageBox.Show("Registration modified successfully");
+                    this.Close();
+                }
+                else
+                    MessageBox.Show("An error occurred");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred:" + ex.Message);
+            }
+        }
+
+      
     }
 }

@@ -31,7 +31,7 @@ namespace AddressBook
         {
             this.components = new System.ComponentModel.Container();
             this.hopeForm1 = new ReaLTaiizor.Forms.HopeForm();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvData = new System.Windows.Forms.DataGridView();
             this.addressidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.firstnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lastnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,7 +46,7 @@ namespace AddressBook
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnCreateNew = new ReaLTaiizor.Controls.HopeButton();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvData)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.directoryBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsAddressBook)).BeginInit();
             this.panel1.SuspendLayout();
@@ -74,13 +74,13 @@ namespace AddressBook
             this.hopeForm1.Text = "Address Book";
             this.hopeForm1.ThemeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(96)))), ((int)(((byte)(111)))));
             // 
-            // dataGridView1
+            // dgvData
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvData.AllowUserToAddRows = false;
+            this.dgvData.AllowUserToDeleteRows = false;
+            this.dgvData.AutoGenerateColumns = false;
+            this.dgvData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.addressidDataGridViewTextBoxColumn,
             this.firstnameDataGridViewTextBoxColumn,
             this.lastnameDataGridViewTextBoxColumn,
@@ -89,14 +89,14 @@ namespace AddressBook
             this.Column1,
             this.Column3,
             this.Column2});
-            this.dataGridView1.DataSource = this.directoryBindingSource;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(845, 349);
-            this.dataGridView1.TabIndex = 2;
-            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dgvData.DataSource = this.directoryBindingSource;
+            this.dgvData.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvData.Location = new System.Drawing.Point(0, 0);
+            this.dgvData.Name = "dgvData";
+            this.dgvData.ReadOnly = true;
+            this.dgvData.Size = new System.Drawing.Size(845, 349);
+            this.dgvData.TabIndex = 2;
+            this.dgvData.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // addressidDataGridViewTextBoxColumn
             // 
@@ -214,7 +214,7 @@ namespace AddressBook
             // 
             // splitContainer1.Panel2
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.dataGridView1);
+            this.splitContainer1.Panel2.Controls.Add(this.dgvData);
             this.splitContainer1.Size = new System.Drawing.Size(845, 406);
             this.splitContainer1.SplitterDistance = 53;
             this.splitContainer1.TabIndex = 4;
@@ -237,7 +237,7 @@ namespace AddressBook
             this.Text = "formTheme1";
             this.TransparencyKey = System.Drawing.Color.Fuchsia;
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvData)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.directoryBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsAddressBook)).EndInit();
             this.panel1.ResumeLayout(false);
@@ -252,7 +252,7 @@ namespace AddressBook
         #endregion
 
         private ReaLTaiizor.Forms.HopeForm hopeForm1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvData;
         private dsAddressBook dsAddressBook;
         private System.Windows.Forms.BindingSource directoryBindingSource;
         private dsAddressBookTableAdapters.directoryTableAdapter directoryTableAdapter;

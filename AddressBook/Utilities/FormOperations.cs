@@ -20,7 +20,7 @@ namespace AddressBook.Utilities
         /// Get the Id of the data grid view containing in the first cell
         /// </summary>
         /// <param name="dgv">Datagridview to get the Id</param>
-        public static int Getid(DataGridView dgv) 
+        public static int GetId(DataGridView dgv) 
         {
             try
             {

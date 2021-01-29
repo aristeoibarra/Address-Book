@@ -39,7 +39,7 @@ namespace AddressBook
             this.textBox1 = new ReaLTaiizor.Controls.HopeTextBox();
             this.txtLastName = new ReaLTaiizor.Controls.HopeTextBox();
             this.txtFirstName = new ReaLTaiizor.Controls.HopeTextBox();
-            this.skyLabel1 = new ReaLTaiizor.Controls.SkyLabel();
+            this.lblTitle = new ReaLTaiizor.Controls.SkyLabel();
             this.txtPhoneNumber = new System.Windows.Forms.MaskedTextBox();
             this.btnSave = new ReaLTaiizor.Controls.HopeButton();
             this.llbBackList = new ReaLTaiizor.Controls.DungeonLinkLabel();
@@ -216,16 +216,16 @@ namespace AddressBook
             this.txtFirstName.TabStop = false;
             this.txtFirstName.UseSystemPasswordChar = false;
             // 
-            // skyLabel1
+            // lblTitle
             // 
-            this.skyLabel1.AutoSize = true;
-            this.skyLabel1.Font = new System.Drawing.Font("Arial Unicode MS", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.skyLabel1.ForeColor = System.Drawing.Color.Black;
-            this.skyLabel1.Location = new System.Drawing.Point(22, 59);
-            this.skyLabel1.Name = "skyLabel1";
-            this.skyLabel1.Size = new System.Drawing.Size(77, 39);
-            this.skyLabel1.TabIndex = 30;
-            this.skyLabel1.Text = "label";
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("Calibri", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.ForeColor = System.Drawing.Color.Black;
+            this.lblTitle.Location = new System.Drawing.Point(22, 59);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(74, 36);
+            this.lblTitle.TabIndex = 30;
+            this.lblTitle.Text = "label";
             // 
             // txtPhoneNumber
             // 
@@ -286,7 +286,7 @@ namespace AddressBook
             this.Controls.Add(this.skyLabel5);
             this.Controls.Add(this.skyLabel4);
             this.Controls.Add(this.skyLabel3);
-            this.Controls.Add(this.skyLabel1);
+            this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.skyLabel2);
             this.Controls.Add(this.llbBackList);
             this.Controls.Add(this.llbSendEmail);
@@ -302,6 +302,7 @@ namespace AddressBook
             this.Name = "frmContact";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmContact";
+            this.Load += new System.EventHandler(this.frmContact_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -319,7 +320,7 @@ namespace AddressBook
         private ReaLTaiizor.Controls.HopeTextBox textBox1;
         private ReaLTaiizor.Controls.HopeTextBox txtLastName;
         private ReaLTaiizor.Controls.HopeTextBox txtFirstName;
-        private ReaLTaiizor.Controls.SkyLabel skyLabel1;
+        private ReaLTaiizor.Controls.SkyLabel lblTitle;
         private System.Windows.Forms.MaskedTextBox txtPhoneNumber;
         private ReaLTaiizor.Controls.HopeButton btnSave;
         private ReaLTaiizor.Controls.DungeonLinkLabel llbBackList;
