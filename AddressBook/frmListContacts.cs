@@ -33,8 +33,28 @@ namespace AddressBook
                     OpenForm(new frmContact());
                     break;
                 case 7:// btnDelete
-                    MessageBox.Show("button Delete");
+                    Delete();
                     break;
+            }
+        }
+
+        private void Delete()
+        {
+            int id = Utilities.FormOperations.GetId(dgvData);
+            if (id > 0)
+            {
+                if (MessageBox.Show("Are you sure to delete the selected record?", "Confirm delete", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    ClsDirectory directory = new ClsDirectory();
+                    if (directory.Delete(id))
+                    {
+                        RefreachData();
+                    }
+                    else
+                    {
+                        MessageBox.Show("An error occurred");
+                    }
+                }
             }
         }
 
@@ -54,6 +74,7 @@ namespace AddressBook
         {
             this.directoryTableAdapter.Fill(this.dsAddressBook.directory);
         }
+
         public void OpenForm(Form form) 
         {           
             this.Hide();

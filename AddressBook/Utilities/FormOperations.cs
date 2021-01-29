@@ -37,7 +37,6 @@ namespace AddressBook.Utilities
         /// Method that validates an email
         /// </summary>
         /// <param name="email">receive an email</param>
-
         public static bool IsValidEmail(string email)
         {
             if (string.IsNullOrWhiteSpace(email))
