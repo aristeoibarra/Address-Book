@@ -32,9 +32,6 @@ namespace AddressBook
             this.components = new System.ComponentModel.Container();
             this.hopeForm1 = new ReaLTaiizor.Forms.HopeForm();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.directoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dsAddressBook = new AddressBook.dsAddressBook();
-            this.directoryTableAdapter = new AddressBook.dsAddressBookTableAdapters.directoryTableAdapter();
             this.addressidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.firstnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lastnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,8 +40,11 @@ namespace AddressBook
             this.Column1 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.directoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dsAddressBook = new AddressBook.dsAddressBook();
+            this.directoryTableAdapter = new AddressBook.dsAddressBookTableAdapters.directoryTableAdapter();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.hopeButton1 = new ReaLTaiizor.Controls.HopeButton();
+            this.btnCreateNew = new ReaLTaiizor.Controls.HopeButton();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.directoryBindingSource)).BeginInit();
@@ -97,20 +97,6 @@ namespace AddressBook
             this.dataGridView1.Size = new System.Drawing.Size(845, 349);
             this.dataGridView1.TabIndex = 2;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
-            // 
-            // directoryBindingSource
-            // 
-            this.directoryBindingSource.DataMember = "directory";
-            this.directoryBindingSource.DataSource = this.dsAddressBook;
-            // 
-            // dsAddressBook
-            // 
-            this.dsAddressBook.DataSetName = "dsAddressBook";
-            this.dsAddressBook.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // directoryTableAdapter
-            // 
-            this.directoryTableAdapter.ClearBeforeFill = true;
             // 
             // addressidDataGridViewTextBoxColumn
             // 
@@ -171,34 +157,49 @@ namespace AddressBook
             this.Column2.Text = "Delete";
             this.Column2.UseColumnTextForButtonValue = true;
             // 
+            // directoryBindingSource
+            // 
+            this.directoryBindingSource.DataMember = "directory";
+            this.directoryBindingSource.DataSource = this.dsAddressBook;
+            // 
+            // dsAddressBook
+            // 
+            this.dsAddressBook.DataSetName = "dsAddressBook";
+            this.dsAddressBook.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // directoryTableAdapter
+            // 
+            this.directoryTableAdapter.ClearBeforeFill = true;
+            // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.hopeButton1);
+            this.panel1.Controls.Add(this.btnCreateNew);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(845, 53);
             this.panel1.TabIndex = 3;
             // 
-            // hopeButton1
+            // btnCreateNew
             // 
-            this.hopeButton1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(223)))), ((int)(((byte)(230)))));
-            this.hopeButton1.ButtonType = ReaLTaiizor.Util.HopeButtonType.Primary;
-            this.hopeButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.hopeButton1.DangerColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(108)))), ((int)(((byte)(108)))));
-            this.hopeButton1.DefaultColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.hopeButton1.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.hopeButton1.HoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(49)))), ((int)(((byte)(51)))));
-            this.hopeButton1.InfoColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(147)))), ((int)(((byte)(153)))));
-            this.hopeButton1.Location = new System.Drawing.Point(12, 7);
-            this.hopeButton1.Name = "hopeButton1";
-            this.hopeButton1.PrimaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(158)))), ((int)(((byte)(255)))));
-            this.hopeButton1.Size = new System.Drawing.Size(129, 40);
-            this.hopeButton1.SuccessColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(194)))), ((int)(((byte)(58)))));
-            this.hopeButton1.TabIndex = 33;
-            this.hopeButton1.Text = "Create New";
-            this.hopeButton1.TextColor = System.Drawing.Color.White;
-            this.hopeButton1.WarningColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(162)))), ((int)(((byte)(60)))));
+            this.btnCreateNew.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(223)))), ((int)(((byte)(230)))));
+            this.btnCreateNew.ButtonType = ReaLTaiizor.Util.HopeButtonType.Primary;
+            this.btnCreateNew.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCreateNew.DangerColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(108)))), ((int)(((byte)(108)))));
+            this.btnCreateNew.DefaultColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnCreateNew.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnCreateNew.HoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(49)))), ((int)(((byte)(51)))));
+            this.btnCreateNew.InfoColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(147)))), ((int)(((byte)(153)))));
+            this.btnCreateNew.Location = new System.Drawing.Point(12, 7);
+            this.btnCreateNew.Name = "btnCreateNew";
+            this.btnCreateNew.PrimaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(158)))), ((int)(((byte)(255)))));
+            this.btnCreateNew.Size = new System.Drawing.Size(129, 40);
+            this.btnCreateNew.SuccessColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(194)))), ((int)(((byte)(58)))));
+            this.btnCreateNew.TabIndex = 33;
+            this.btnCreateNew.Text = "Create New";
+            this.btnCreateNew.TextColor = System.Drawing.Color.White;
+            this.btnCreateNew.WarningColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(162)))), ((int)(((byte)(60)))));
+            this.btnCreateNew.Click += new System.EventHandler(this.btnCreateNew_Click);
             // 
             // splitContainer1
             // 
@@ -264,7 +265,7 @@ namespace AddressBook
         private System.Windows.Forms.DataGridViewButtonColumn Column3;
         private System.Windows.Forms.DataGridViewButtonColumn Column2;
         private System.Windows.Forms.Panel panel1;
-        private ReaLTaiizor.Controls.HopeButton hopeButton1;
+        private ReaLTaiizor.Controls.HopeButton btnCreateNew;
         private System.Windows.Forms.SplitContainer splitContainer1;
     }
 }

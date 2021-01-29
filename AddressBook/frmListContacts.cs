@@ -28,7 +28,7 @@ namespace AddressBook
             switch (e.ColumnIndex)
             {
                 case 5:// btnEdit
-                    OpenForm(new frmContact());
+                    OpenForm(new frmContact());                   
                     break;
                 case 6:// btnView 
                     OpenForm(new frmContact());
@@ -39,26 +39,17 @@ namespace AddressBook
             }
         }
 
-
-        public int GetId(DataGridView dgv)
-        {
-            try
-            {
-                int id = 0;
-                id = int.Parse(dgv.Rows[dgv.CurrentRow.Index].Cells[0].Value.ToString());
-                return id;
-            }
-            catch (Exception)
-            {
-                return -1;
-            }
-        }
-
         public void OpenForm(Form form) 
         {           
             this.Hide();
             form.ShowDialog();
             this.Show();
+            this.directoryTableAdapter.Fill(this.dsAddressBook.directory);
+        }
+
+        private void btnCreateNew_Click(object sender, EventArgs e)
+        {
+            OpenForm(new frmContact());
         }
     }
 }

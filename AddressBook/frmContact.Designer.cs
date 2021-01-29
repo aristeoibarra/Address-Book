@@ -56,6 +56,7 @@ namespace AddressBook
             this.hopeForm1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(246)))), ((int)(((byte)(252)))));
             this.hopeForm1.Image = null;
             this.hopeForm1.Location = new System.Drawing.Point(0, 0);
+            this.hopeForm1.MaximizeBox = false;
             this.hopeForm1.Name = "hopeForm1";
             this.hopeForm1.Size = new System.Drawing.Size(585, 40);
             this.hopeForm1.TabIndex = 0;
@@ -256,6 +257,7 @@ namespace AddressBook
             this.btnSave.Text = "Save";
             this.btnSave.TextColor = System.Drawing.Color.White;
             this.btnSave.WarningColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(162)))), ((int)(((byte)(60)))));
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // llbBackList
             // 
@@ -294,6 +296,7 @@ namespace AddressBook
             this.Controls.Add(this.txtFirstName);
             this.Controls.Add(this.hopeForm1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(1366, 728);
             this.MinimumSize = new System.Drawing.Size(190, 40);
             this.Name = "frmContact";
