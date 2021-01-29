@@ -132,8 +132,6 @@ namespace AddressBook
             {
                 MessageBox.Show("An error occurred:" + ex.Message);
             }
-        }
-
-      
+        }   
     }
 }
