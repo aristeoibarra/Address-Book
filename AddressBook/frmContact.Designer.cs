@@ -34,7 +34,6 @@ namespace AddressBook
             this.skyLabel4 = new ReaLTaiizor.Controls.SkyLabel();
             this.skyLabel3 = new ReaLTaiizor.Controls.SkyLabel();
             this.skyLabel2 = new ReaLTaiizor.Controls.SkyLabel();
-            this.llbSendEmail = new ReaLTaiizor.Controls.DungeonLinkLabel();
             this.txtEmail = new ReaLTaiizor.Controls.HopeTextBox();
             this.textBox1 = new ReaLTaiizor.Controls.HopeTextBox();
             this.txtLastName = new ReaLTaiizor.Controls.HopeTextBox();
@@ -106,22 +105,6 @@ namespace AddressBook
             this.skyLabel2.Size = new System.Drawing.Size(119, 20);
             this.skyLabel2.TabIndex = 30;
             this.skyLabel2.Text = "First Name:";
-            // 
-            // llbSendEmail
-            // 
-            this.llbSendEmail.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(97)))), ((int)(((byte)(1)))));
-            this.llbSendEmail.AutoSize = true;
-            this.llbSendEmail.BackColor = System.Drawing.Color.Transparent;
-            this.llbSendEmail.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.llbSendEmail.LinkBehavior = System.Windows.Forms.LinkBehavior.AlwaysUnderline;
-            this.llbSendEmail.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(97)))), ((int)(((byte)(1)))));
-            this.llbSendEmail.Location = new System.Drawing.Point(460, 298);
-            this.llbSendEmail.Name = "llbSendEmail";
-            this.llbSendEmail.Size = new System.Drawing.Size(85, 20);
-            this.llbSendEmail.TabIndex = 26;
-            this.llbSendEmail.TabStop = true;
-            this.llbSendEmail.Text = "Send Email";
-            this.llbSendEmail.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(97)))), ((int)(((byte)(1)))));
             // 
             // txtEmail
             // 
@@ -290,7 +273,6 @@ namespace AddressBook
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.skyLabel2);
             this.Controls.Add(this.llbBackList);
-            this.Controls.Add(this.llbSendEmail);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.txtLastName);
@@ -316,7 +298,6 @@ namespace AddressBook
         private ReaLTaiizor.Controls.SkyLabel skyLabel4;
         private ReaLTaiizor.Controls.SkyLabel skyLabel3;
         private ReaLTaiizor.Controls.SkyLabel skyLabel2;
-        private ReaLTaiizor.Controls.DungeonLinkLabel llbSendEmail;
         private ReaLTaiizor.Controls.HopeTextBox txtEmail;
         private ReaLTaiizor.Controls.HopeTextBox textBox1;
         private ReaLTaiizor.Controls.HopeTextBox txtLastName;

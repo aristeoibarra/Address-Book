@@ -47,6 +47,7 @@ namespace AddressBook
         private void llbEdit_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Edit();
+            GetData();
         }
 
         private void Edit()
@@ -70,6 +71,11 @@ namespace AddressBook
         private void llbBackList_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             this.Close();
+        }
+
+        private void llbSendEmail_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("mailto: " + lblEmail.Text);
         }
     }
 }

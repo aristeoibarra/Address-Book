@@ -138,6 +138,7 @@ namespace AddressBook
             this.llbSendEmail.TabStop = true;
             this.llbSendEmail.Text = "Send Email";
             this.llbSendEmail.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(97)))), ((int)(((byte)(1)))));
+            this.llbSendEmail.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llbSendEmail_LinkClicked);
             // 
             // lblFirstName
             // 
