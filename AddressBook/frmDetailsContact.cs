@@ -66,5 +66,10 @@ namespace AddressBook
             form.ShowDialog();
             this.Show();
         }
+
+        private void llbBackList_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

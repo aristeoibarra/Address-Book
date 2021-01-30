@@ -132,6 +132,11 @@ namespace AddressBook
             {
                 MessageBox.Show("An error occurred:" + ex.Message);
             }
-        }   
+        }
+
+        private void llbBackList_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -121,6 +121,7 @@ namespace AddressBook
             this.llbBackList.TabStop = true;
             this.llbBackList.Text = "Back to List";
             this.llbBackList.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(97)))), ((int)(((byte)(1)))));
+            this.llbBackList.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llbBackList_LinkClicked);
             // 
             // llbSendEmail
             // 
