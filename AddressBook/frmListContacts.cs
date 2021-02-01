@@ -83,7 +83,18 @@ namespace AddressBook
 
         private void RefreachData()
         {
-            this.directoryTableAdapter.Fill(this.dsAddressBook.directory);
+            try
+            {
+                this.directoryTableAdapter.Fill(this.dsAddressBook.directory);
+            }
+            catch (MySql.Data.MySqlClient.MySqlException me)
+            {
+                MessageBox.Show("A connection error occurred: " + me.Message);
+            }
+            catch(Exception e)
+            {
+                MessageBox.Show("An error occurred: " + e.Message);
+            }          
         }
 
         public void OpenForm(Form form) 
