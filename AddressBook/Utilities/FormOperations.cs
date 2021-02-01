@@ -20,11 +20,16 @@ namespace AddressBook.Utilities
         /// Get the Id of the data grid view containing in the first cell
         /// </summary>
         /// <param name="dgv">Datagridview to get the Id</param>
-        public static int GetId(DataGridView dgv) 
+        public static int GetId(DataGridView dgv)
         {
             try
             {
-                int id = int.Parse(dgv.Rows[dgv.CurrentRow.Index].Cells[0].Value.ToString());
+                int id;
+                if (dgv.Rows.Count != 0)
+                    id = int.Parse(dgv.Rows[dgv.CurrentRow.Index].Cells[0].Value.ToString());
+                else
+                    id = -1;
+
                 return id;
             }
             catch (Exception)

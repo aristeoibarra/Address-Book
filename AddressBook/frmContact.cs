@@ -13,7 +13,7 @@ namespace AddressBook
     public partial class frmContact : Form
     {
         public int idAddress = 0;
-        ClsDirectory directory = new ClsDirectory(); 
+        readonly ClsDirectory directory = new ClsDirectory(); 
 
         public frmContact()
         {
