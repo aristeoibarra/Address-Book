@@ -125,7 +125,7 @@ namespace AddressBook
             this.txtEmail.SelectionLength = 0;
             this.txtEmail.SelectionStart = 0;
             this.txtEmail.Size = new System.Drawing.Size(341, 36);
-            this.txtEmail.TabIndex = 22;
+            this.txtEmail.TabIndex = 4;
             this.txtEmail.TabStop = false;
             this.txtEmail.UseSystemPasswordChar = false;
             // 
@@ -172,9 +172,10 @@ namespace AddressBook
             this.txtLastName.SelectionLength = 0;
             this.txtLastName.SelectionStart = 0;
             this.txtLastName.Size = new System.Drawing.Size(341, 36);
-            this.txtLastName.TabIndex = 24;
+            this.txtLastName.TabIndex = 2;
             this.txtLastName.TabStop = false;
             this.txtLastName.UseSystemPasswordChar = false;
+            this.txtLastName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyLetters);
             // 
             // txtFirstName
             // 
@@ -195,9 +196,10 @@ namespace AddressBook
             this.txtFirstName.SelectionLength = 0;
             this.txtFirstName.SelectionStart = 0;
             this.txtFirstName.Size = new System.Drawing.Size(341, 36);
-            this.txtFirstName.TabIndex = 25;
+            this.txtFirstName.TabIndex = 1;
             this.txtFirstName.TabStop = false;
             this.txtFirstName.UseSystemPasswordChar = false;
+            this.txtFirstName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyLetters);
             // 
             // lblTitle
             // 
@@ -219,7 +221,7 @@ namespace AddressBook
             this.txtPhoneNumber.Mask = "000-000-0000";
             this.txtPhoneNumber.Name = "txtPhoneNumber";
             this.txtPhoneNumber.Size = new System.Drawing.Size(326, 20);
-            this.txtPhoneNumber.TabIndex = 31;
+            this.txtPhoneNumber.TabIndex = 3;
             // 
             // btnSave
             // 
@@ -236,7 +238,7 @@ namespace AddressBook
             this.btnSave.PrimaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(158)))), ((int)(((byte)(255)))));
             this.btnSave.Size = new System.Drawing.Size(129, 40);
             this.btnSave.SuccessColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(194)))), ((int)(((byte)(58)))));
-            this.btnSave.TabIndex = 32;
+            this.btnSave.TabIndex = 5;
             this.btnSave.Text = "Save";
             this.btnSave.TextColor = System.Drawing.Color.White;
             this.btnSave.WarningColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(162)))), ((int)(((byte)(60)))));
@@ -253,7 +255,7 @@ namespace AddressBook
             this.llbBackList.Location = new System.Drawing.Point(12, 365);
             this.llbBackList.Name = "llbBackList";
             this.llbBackList.Size = new System.Drawing.Size(90, 20);
-            this.llbBackList.TabIndex = 26;
+            this.llbBackList.TabIndex = 6;
             this.llbBackList.TabStop = true;
             this.llbBackList.Text = "Back to List";
             this.llbBackList.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(97)))), ((int)(((byte)(1)))));

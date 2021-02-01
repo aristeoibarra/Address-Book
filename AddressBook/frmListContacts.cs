@@ -90,6 +90,7 @@ namespace AddressBook
             catch (MySql.Data.MySqlClient.MySqlException me)
             {
                 MessageBox.Show("A connection error occurred: " + me.Message);
+                btnCreateNew.Enabled = false;
             }
             catch(Exception e)
             {

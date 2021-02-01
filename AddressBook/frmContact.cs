@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -58,6 +59,15 @@ namespace AddressBook
                 Edit();
             }
         }
+
+        private void DataPerson()
+        {
+            directory.FirstName = ToTitleCase(txtFirstName.Text.Trim());
+            directory.LastName = ToTitleCase(txtLastName.Text.Trim());
+            directory.PhoneNumber = txtPhoneNumber.Text.Trim();
+            directory.Email = txtEmail.Text.Trim();
+        }
+
         private void Add()
         {
             try
@@ -71,10 +81,15 @@ namespace AddressBook
                 }
                 if (!Utilities.FormOperations.IsValidEmail(txtEmail.Text))
                 {
-                    MessageBox.Show("Email must be valid", "Warning");
+                    MessageBox.Show("The email is not valid", "Warning");
                     return;
                 }
-
+                if (!IsValidPhone(txtPhoneNumber.Text))
+                {
+                    MessageBox.Show("the phone number is not valid");
+                    return;
+                }
+                
                 //DATA
                 DataPerson();
 
@@ -92,14 +107,6 @@ namespace AddressBook
             }          
         }
 
-        private void DataPerson()
-        {
-            directory.FirstName = txtFirstName.Text.Trim();
-            directory.LastName = txtLastName.Text.Trim();
-            directory.PhoneNumber = txtPhoneNumber.Text.Trim();
-            directory.Email = txtEmail.Text.Trim();
-        }
-
         private void Edit()
         {
             try
@@ -114,6 +121,11 @@ namespace AddressBook
                 if (!Utilities.FormOperations.IsValidEmail(txtEmail.Text))
                 {
                     MessageBox.Show("Email must be valid", "Warning");
+                    return;
+                }
+                if (!IsValidPhone(txtPhoneNumber.Text))
+                {
+                    MessageBox.Show("the phone number is not valid");
                     return;
                 }
 
@@ -134,9 +146,23 @@ namespace AddressBook
             }
         }
 
-        private void llbBackList_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void llbBackList_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) => this.Close();
+
+        /// Validations
+        private void OnlyLetters(object sender, KeyPressEventArgs e)
         {
-            this.Close();
+            if (!char.IsLetter(e.KeyChar)
+                && (e.KeyChar != (char)Keys.Back)
+                && (e.KeyChar != (char)Keys.Space))
+            { e.Handled = true; return; }
         }
+
+        private bool IsValidPhone(string number)
+        {
+            Func<string, bool> isValid = num => num.Trim().Length == 12;
+            return isValid(number);
+        }
+
+        private string ToTitleCase(string text) => CultureInfo.InvariantCulture.TextInfo.ToTitleCase(text);
     }
 }
